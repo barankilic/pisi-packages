@@ -4026,6 +4026,96 @@
         </Source>
     </Package>
     <Package>
+        <Name>postgresql-odbc</Name>
+        <Summary xml:lang="en">PostgreSQL ODBC driver</Summary>
+        <Summary xml:lang="tr">PostgreSQL ODBC sürücüsü</Summary>
+        <Description xml:lang="en">PostgeSQL-ODBC is a library to talk to the PostgreSQL DBMS using ODBC.</Description>
+        <Description xml:lang="tr">PostgeSQL-ODBC, ODBC katmanı vasıtasıyla PostgeSQL DBMS ile haberleşebilen bir kitaplıktır.</Description>
+        <IsA>library</IsA>
+        <PartOf>unknown</PartOf>
+        <License>LGPLv2.1</License>
+        <RuntimeDependencies>
+            <Dependency>postgresql-lib</Dependency>
+            <Dependency>unixODBC</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="8">
+                <Date>2012-10-15</Date>
+                <Version>9.01.0200</Version>
+                <Comment>Version bump to 9.00.0200</Comment>
+                <Name>Baran Kılıç</Name>
+                <Email>barankilic@gmail.com</Email>
+            </Update>
+            <Update release="7">
+                <Date>2011-01-12</Date>
+                <Version>9.00.0100</Version>
+                <Comment>Version bump.</Comment>
+                <Name>H. İbrahim Güngör</Name>
+                <Email>ibrahim@pardus.org.tr</Email>
+            </Update>
+            <Update release="6">
+                <Date>2009-09-13</Date>
+                <Version>8.4.01</Version>
+                <Comment>Vesion bump
+                Update dependencies and description</Comment>
+                <Name>Taner Taş</Name>
+                <Email>taner@pardus.org.tr</Email>
+            </Update>
+            <Update release="5">
+                <Date>2008-07-12</Date>
+                <Version>8.3.02</Version>
+                <Comment>Vesion bump</Comment>
+                <Name>Ekin Meroğlu</Name>
+                <Email>ekin@pardus.org.tr</Email>
+            </Update>
+            <Update release="4">
+                <Date>2007-03-09</Date>
+                <Version>8.1.8</Version>
+                <Comment>Vesion bump</Comment>
+                <Name>Ali Erdinç Köroğlu</Name>
+                <Email>erdinc@pardus.org.tr</Email>
+            </Update>
+            <Update release="3">
+                <Date>2006-10-26</Date>
+                <Version>8.1.5</Version>
+                <Comment>Vesion bump</Comment>
+                <Name>Ali Erdinç Köroğlu</Name>
+                <Email>erdinc@pardus.org.tr</Email>
+            </Update>
+            <Update release="2">
+                <Date>2006-10-24</Date>
+                <Version>8.1.4</Version>
+                <Comment>Rename dependency</Comment>
+                <Name>İsmail Dönmez</Name>
+                <Email>ismail@pardus.org.tr</Email>
+            </Update>
+            <Update release="1">
+                <Date>2006-09-29</Date>
+                <Version>8.1.4</Version>
+                <Comment>First release</Comment>
+                <Name>Ali Erdinç Köroğlu</Name>
+                <Email>erdinc@pardus.org.tr</Email>
+            </Update>
+        </History>
+        <BuildHost>localhost</BuildHost>
+        <Distribution>Pardus</Distribution>
+        <DistributionRelease>2011</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>570577</InstalledSize>
+        <PackageSize>238918</PackageSize>
+        <PackageHash>716a78d859ecf314dc22b8c36498fa72b462b83b</PackageHash>
+        <PackageURI>postgresql-odbc-9.01.0200-8-p11-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>postgresql-odbc</Name>
+            <Homepage>http://pgfoundry.org/projects/psqlodbc</Homepage>
+            <Packager>
+                <Name>Pardus ANKA Admins</Name>
+                <Email>pisiciftligi@pardus-linux.org</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
         <Name>postgresql-doc</Name>
         <Summary xml:lang="en">Postgresql documents</Summary>
         <Summary xml:lang="tr">Postegresql belgeleri</Summary>
@@ -7405,6 +7495,87 @@
         </Source>
     </Package>
     <Package>
+        <Name>nginx</Name>
+        <Summary xml:lang="en">Robust, small and high performance http and reverse proxy server</Summary>
+        <Summary xml:lang="tr">Küçük, sağlam ve yüksek performanslı http ve ters vekil sunucusu</Summary>
+        <Description xml:lang="en">Nginx is a free, open-source, high-performance HTTP server and reverse proxy, as well as an IMAP/POP3 proxy server. Written by Igor Sysoev in 2005, Nginx now hosts between 1% and 4% of all domains worldwide. Nginx is known for its stability, rich feature set, simple configuration, and low resource consumption.</Description>
+        <Description xml:lang="tr">nginx, özgür, açık kaynaklı, yüksek performanslı bir HTTP, ters vekil (reverse proxy) ve aynı zamanda IMAP/POP3 sunucusudur.</Description>
+        <IsA>service</IsA>
+        <PartOf>server.web</PartOf>
+        <License>as-is</License>
+        <RuntimeDependencies>
+            <Dependency>geoip</Dependency>
+            <Dependency>gd</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>libxslt</Dependency>
+        </RuntimeDependencies>
+        <Provides>
+            <COMAR script="package.py">System.Package</COMAR>
+            <COMAR script="service.py">System.Service</COMAR>
+        </Provides>
+        <History>
+            <Update release="6">
+                <Date>2012-12-05</Date>
+                <Version>1.3.9</Version>
+                <Comment>Version Bump</Comment>
+                <Name>Baran Kılıç</Name>
+                <Email>barankilic@gmail.com</Email>
+            </Update>
+            <Update release="5">
+                <Date>2012-10-15</Date>
+                <Version>1.2.4</Version>
+                <Comment>Version Bump</Comment>
+                <Name>Baran Kılıç</Name>
+                <Email>barankilic@gmail.com</Email>
+            </Update>
+            <Update release="4">
+                <Date>2011-04-25</Date>
+                <Version>0.8.54</Version>
+                <Comment>fix build dep;geoip-devel</Comment>
+                <Name>Ertuğrul Erata</Name>
+                <Email>ertugrulerata@gmail.com</Email>
+            </Update>
+            <Update release="3">
+                <Date>2010-12-28</Date>
+                <Version>0.8.54</Version>
+                <Comment>Version Bump</Comment>
+                <Name>Erdem Bayer</Name>
+                <Email>ebayer@bayer.gen.tr</Email>
+            </Update>
+            <Update release="2">
+                <Date>2010-10-17</Date>
+                <Version>0.8.52</Version>
+                <Comment>Version Bump</Comment>
+                <Name>Erdem Bayer</Name>
+                <Email>ebayer@bayer.gen.tr</Email>
+            </Update>
+            <Update release="1">
+                <Date>2010-04-28</Date>
+                <Version>0.8.36</Version>
+                <Comment>First release.</Comment>
+                <Name>Eren Türkay</Name>
+                <Email>eren@pardus.org.tr</Email>
+            </Update>
+        </History>
+        <BuildHost>localhost</BuildHost>
+        <Distribution>Pardus</Distribution>
+        <DistributionRelease>2011</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>982027</InstalledSize>
+        <PackageSize>388769</PackageSize>
+        <PackageHash>4f22aa71e46957346282bb991cb897644f829ab1</PackageHash>
+        <PackageURI>nginx-1.3.9-6-p11-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>nginx</Name>
+            <Homepage>http://www.nginx.net/</Homepage>
+            <Packager>
+                <Name>Pardus ANKA Admins</Name>
+                <Email>pisiciftligi@pardus-linux.org</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
         <Name>libxfce4util</Name>
         <Summary xml:lang="en">Xfce basic utility library</Summary>
         <Summary xml:lang="tr">Xfce için basit yardımcı uygulama kitaplığı</Summary>
@@ -8159,6 +8330,55 @@
         </Source>
     </Package>
     <Package>
+        <Name>dropbox</Name>
+        <Summary xml:lang="de">Ein Programm für den Dropbox Service</Summary>
+        <Summary xml:lang="tr">Bir Dropbox istemcisi</Summary>
+        <Summary xml:lang="en">A Dropbox client</Summary>
+        <Description xml:lang="de">Dropbox ist ein web-basierender Dienst der es ermöglicht Dateien über das Internet auf verschiedenen Rechnern synchron zu halten. Dropbox stellt kostenlos 2GB Speicherplatz zur Verfügung.</Description>
+        <Description xml:lang="tr">Dropbox, kullanıcıların dosyalarını güvenli bir şekilde yedeklemesine ve diğerleriyle paylaşmasına izin veren bulut hesaplama tabanlı bir dosya barındırma servisidir.</Description>
+        <Description xml:lang="en">Dropbox is a Web-based file hosting service which uses cloud computing to enable users to store and share files and folders with others across the Internet using file synchronization.</Description>
+        <IsA>app:gui</IsA>
+        <PartOf>network.share</PartOf>
+        <License>as-is</License>
+        <Icon>dropbox</Icon>
+        <RuntimeDependencies>
+            <Dependency>gtk2</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="2">
+                <Date>2012-12-06</Date>
+                <Version>1.6.3</Version>
+                <Comment>Version Bump.</Comment>
+                <Name>Baran Kılıç</Name>
+                <Email>barankilic@gmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2011-01-19</Date>
+                <Version>1.0.20</Version>
+                <Comment>First release.</Comment>
+                <Name>Anıl Özbek</Name>
+                <Email>ozbekanil@gmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>localhost</BuildHost>
+        <Distribution>Pardus</Distribution>
+        <DistributionRelease>2011</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>49086951</InstalledSize>
+        <PackageSize>31899107</PackageSize>
+        <PackageHash>b920180eb63970cbe579254a159a04a12e3dd98b</PackageHash>
+        <PackageURI>dropbox-1.6.3-2-p11-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>dropbox</Name>
+            <Homepage>http://www.dropbox.com</Homepage>
+            <Packager>
+                <Name>Anıl Özbek</Name>
+                <Email>ozbekanil@gmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
         <Name>mysql-man-pages</Name>
         <Summary xml:lang="en">Man pages for MySQL server and client</Summary>
         <Summary xml:lang="tr">MySQL sunucu ve istemci uygulamarına ait man sayfaları</Summary>
@@ -8771,6 +8991,96 @@
             <Packager>
                 <Name>Gürkan ZEGNIN</Name>
                 <Email>gurkan@pardususer.de</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>mrtg</Name>
+        <Summary xml:lang="en">The Multi Router Traffic Grapher</Summary>
+        <Summary xml:lang="tr">Trafik yükü izleme aracı</Summary>
+        <Description xml:lang="en">A tool to monitor the traffic load on network-links.</Description>
+        <Description xml:lang="tr">Ağ bağlantılarındaki trafik yükünü izlemeye yarayan bir araç.</Description>
+        <IsA>library</IsA>
+        <PartOf>unknown</PartOf>
+        <License>GPLv2</License>
+        <RuntimeDependencies>
+            <Dependency>net-snmp</Dependency>
+            <Dependency>apache</Dependency>
+            <Dependency>gd</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="8">
+                <Date>2012-10-25</Date>
+                <Version>2.17.4</Version>
+                <Comment>Version bump to 2.17.4</Comment>
+                <Name>Baran Kılıç</Name>
+                <Email>barankilic@gmail.com</Email>
+            </Update>
+            <Update release="7">
+                <Date>2011-09-26</Date>
+                <Version>2.17.2</Version>
+                <Comment>Version bump to 2.17.2</Comment>
+                <Name>Kaan Özdinçer</Name>
+                <Email>kozdincer@pardus.org.tr</Email>
+            </Update>
+            <Update release="6">
+                <Date>2010-10-27</Date>
+                <Version>2.16.3</Version>
+                <Comment>Mass rebuild for Pardus Corporate 2 Alpha 3</Comment>
+                <Name>Ozan Çağlayan</Name>
+                <Email>ozan@pardus.org.tr</Email>
+            </Update>
+            <Update release="5">
+                <Date>2010-04-01</Date>
+                <Version>2.16.3</Version>
+                <Comment>Version bump, add gd dependency</Comment>
+                <Name>Necdet Yücel</Name>
+                <Email>nyucel@comu.edu.tr</Email>
+            </Update>
+            <Update release="4">
+                <Date>2009-04-17</Date>
+                <Version>2.16.2</Version>
+                <Comment>Version bump</Comment>
+                <Name>Taner Taş</Name>
+                <Email>taner@pardus.org.tr</Email>
+            </Update>
+            <Update release="3">
+                <Date>2008-03-17</Date>
+                <Version>2.16.1</Version>
+                <Comment>Version bump</Comment>
+                <Name>Ali Erdinç Köroğlu</Name>
+                <Email>erdinc@pardus.org.tr</Email>
+            </Update>
+            <Update release="2">
+                <Date>2007-05-10</Date>
+                <Version>2.15.2</Version>
+                <Comment>Stable update</Comment>
+                <Name>İsmail Dönmez</Name>
+                <Email>ismail@pardus.org.tr</Email>
+            </Update>
+            <Update release="1">
+                <Date>2007-02-10</Date>
+                <Version>2.15.1</Version>
+                <Comment>First release</Comment>
+                <Name>Ali Erdinç Köroğlu</Name>
+                <Email>erdinc@pardus.org.tr</Email>
+            </Update>
+        </History>
+        <BuildHost>localhost</BuildHost>
+        <Distribution>Pardus</Distribution>
+        <DistributionRelease>2011</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>1865020</InstalledSize>
+        <PackageSize>493818</PackageSize>
+        <PackageHash>9640a7af0f6382f80e7b0f9573fd612c867fe485</PackageHash>
+        <PackageURI>mrtg-2.17.4-8-p11-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>mrtg</Name>
+            <Homepage>http://oss.oetiker.ch/mrtg</Homepage>
+            <Packager>
+                <Name>Pardus ANKA Admins</Name>
+                <Email>pisiciftligi@pardus-linux.org</Email>
             </Packager>
         </Source>
     </Package>
